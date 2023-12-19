@@ -1,16 +1,16 @@
 //Grabbing the elements from HTML
-const start = $('#start');
-const reset = $('#reset');
+const start = document.getElementById('start');
+const reset = document.getElementById('reset');
 const cells = document.querySelectorAll(".box");
 const winConditions = [
-    [cell0, cell1, cell2],
-    [cell3, cell4, cell5],
-    [cell6, cell7, cell8],
-    [cell0, cell3, cell6],
-    [cell1, cell4, cell7],
-    [cell2, cell5, cell8],
-    [cell0, cell4, cell8],
-    [cell2, cell4, cell6]
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
 ];
 let options = ["", "", "", "", "", "", "", "", ""];
 let currentPlayer = "X";
@@ -19,7 +19,7 @@ let running = false;
 initGame();
 
 function initGame() {
-    cells.forEach((cell) => cell.addEventListener('click', cellClicked))
+    cells.forEach((cell) => cell.addEventListener('click', cellClicked));
     reset.addEventListener('click', restartGame);
     start.addEventListener('click', startGame);
     playerTurn.textContent = `${currentPlayer}'s turn`;
@@ -28,7 +28,7 @@ function initGame() {
 }
 
 function cellClicked(){
-    const cellId = cells.getAttribute('id');
+    const cellId = this.getAttribute('id');
 
     if(options[cellId] != "" || !running){
         return;
