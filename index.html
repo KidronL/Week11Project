@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic-Tac-Toe</title>
+</head>
+<body class="bg-dark">
+    <div class="d-flex p-2 justify-content-center text-white">
+        <h1>Tic-Tac-Toe</h1>
+    </div><br>
+
+    <div class="container">
+        <div class="d-flex justify-content-center text-white">
+            <h3>This is a game of Tic-Tac-Toe</h3>
+        </div>
+        <br>
+        <div class="row pt- text-center">
+            <div class="col fs-2 text-danger">Player 1 - X</div>
+            <div class="col fs-2"></div>
+            <div class="col fs-2 text-danger">Player 2 - O</div>
+        </div>
+    </div>
+    <br><br>
+<div class="container m-auto p-3 g-5">
+    <div id="game" class="containter-outline-light m-auto p-0 bg-info text-primary text-center align-middle border border-light">
+        <div class="row fs-1 g-0">
+            <div id="cell0" class="box col p-3 border border-secondary"></div>
+            <div id="cell1" class="box col p-3 border border-secondary"></div>
+            <div id="cell2" class="box col p-3 border border-secondary"></div>
+        </div>
+        <div class="row fs-1 g-0">
+            <div id="cell3" class="box col p-3 border border-secondary"></div>
+            <div id="cell4" class="box col p-3 border border-secondary"></div>
+            <div id="cell5" class="box col p-3 border border-secondary"></div>
+        </div>
+        <div class="row fs-1 g-0">
+            <div id="cell6" class="box col p-3 border border-secondary"></div>
+            <div id="cell7" class="box col p-3 border border-secondary"></div>
+            <div id="cell8" class="box col p-3 border border-secondary"></div>
+        </div>
+        </div>
+    </div>
+</div><br>
+
+<div>
+    <h3 id="playerTurn" class="text-white"></h3>
+</div><br>
+
+<div class="d-grid col-2 gap-3 mx-auto p-4s">
+    <button id="start" type="button" class="btn btn-primary">Start</button>
+    <button id="reset" type="button" class="btn btn-secondary">Reset</button>
+</div>
+    
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
